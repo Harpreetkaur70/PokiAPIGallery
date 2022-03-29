@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
 
 extension ViewController:UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    //MARK: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pokemanImages.count
     }
@@ -34,4 +35,19 @@ extension ViewController:UICollectionViewDataSource, UICollectionViewDelegateFlo
         return cell
     }
     
+    //MARK: UICollectionViewDelegateFlowLayout // to set layout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+          return 10
+      }
+      
+      
+      func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+          return 10
+      }
+      
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+          
+          return CGSize(width: collectionView.frame.width / 3.2 , height:collectionView.frame.width / 3.2)
+      }
 }
