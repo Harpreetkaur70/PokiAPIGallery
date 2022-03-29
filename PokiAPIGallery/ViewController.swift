@@ -24,13 +24,14 @@ class ViewController: UIViewController {
 
 extension ViewController:UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     //MARK: UICollectionViewDataSource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pokemanImages.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         let galleryImageView = (cell.viewWithTag(10) as! UIImageView)
-        galleryImageView.image = self.pokemanImages[indexPath.item]
+        galleryImageView.image = self.pokemanImages[indexPath.item]  //assign poke api data to collection View
         
         return cell
     }

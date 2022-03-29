@@ -46,7 +46,7 @@ class PokeAPIHelper {
     }
     
     static func fetchPokeImageURL(callback: @escaping ([URL])->Void){
-        var imageURLs = [URL]()
+        var imageURLs = [URL]()             //image array to store image url
         let group = DispatchGroup()
         fetchURLs { urls in
             for url in urls {
