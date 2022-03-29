@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//codable classes containg aaray and variable for storing json other data
 struct Pokemons: Codable{
     var results: [Pokemon]
 }
